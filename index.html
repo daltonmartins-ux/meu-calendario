@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Calendar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calendar">
+
+        <!-- Calendar Header -->
+        <div class="calendar-header">
+
+            <button id="previousMonth" class="arrow">‹</button>
+
+            <div class="month-info">
+                <h1 id="month">September</h1>
+                <p id="year">2026</p>
+            </div>
+
+            <button id="nextMonth" class="arrow">›</button>
+
+        </div>
+
+
+        <!-- Weekdays -->
+        <div class="weekdays">
+
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+
+        </div>
+
+
+        <!-- Calendar Days -->
+        <div id="days" class="days"></div>
+
+
+        <!-- Today Button -->
+        <button id="todayButton" class="today-button">
+            Today
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

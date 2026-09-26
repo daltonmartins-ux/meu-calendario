@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar {
+    width: 380px;
+    min-height: 460px;
+
+    padding: 28px;
+
+    background: #050505;
+
+    border: 1px solid #222222;
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        inset 0 0 30px rgba(255, 255, 255, 0.02);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.calendar-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.month-info {
+    text-align: center;
+}
+
+
+.month-info h1 {
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+}
+
+
+.month-info p {
+    margin-top: 5px;
+
+    color: #6c9cff;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.arrow {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #111111;
+
+    color: #6c9cff;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.arrow:hover {
+    background: #1c1c1c;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   WEEKDAYS
+========================= */
+
+.weekdays {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-bottom: 12px;
+}
+
+
+.weekdays span {
+    text-align: center;
+
+    color: #666666;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   DAYS
+========================= */
+
+.days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 7px;
+}
+
+
+.days span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    color: #5590ff;
+
+    font-size: 14px;
+
+    cursor: default;
+
+    transition: 0.2s ease;
+}
+
+
+/* Empty spaces */
+
+.days span.empty {
+    visibility: hidden;
+}
+
+
+/* =========================
+   TODAY
+========================= */
+
+.days span.today {
+    background: #2774ff;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 0 5px rgba(39, 116, 255, 0.12),
+        0 5px 20px rgba(39, 116, 255, 0.3);
+}
+
+
+/* =========================
+   HOVER ON DAYS
+========================= */
+
+.days span:not(.today):not(.empty):hover {
+    background: #151f35;
+
+    color: #8bb3ff;
+}
+
+
+/* =========================
+   TODAY BUTTON
+========================= */
+
+.today-button {
+    display: block;
+
+    margin: 25px auto 0;
+
+    padding: 9px 20px;
+
+    border: 1px solid #2774ff;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: #5590ff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.today-button:hover {
+    background: #2774ff;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 450px) {
+
+    .calendar {
+        width: 90%;
+
+        padding: 22px;
+    }
+
+
+    .days span {
+        width: 36px;
+        height: 36px;
+    }
+
+}
